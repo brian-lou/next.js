@@ -401,7 +401,10 @@ async function createComponentTreeInternal({
     actualSegment !== DEFAULT_SEGMENT_KEY && StreamingMetadata ? (
       <StreamingMetadata />
     ) : undefined
-  const metadataOutlet = <StreamingMetadataOutlet />
+  const metadataOutlet =
+    actualSegment !== DEFAULT_SEGMENT_KEY ? (
+      <StreamingMetadataOutlet />
+    ) : undefined
 
   const notFoundElement = NotFound ? (
     <>
@@ -855,7 +858,6 @@ async function createComponentTreeInternal({
           >
             {layerAssets}
             {serverSegment}
-            {metadataOutlet}
           </HTTPAccessFallbackBoundary>
         )
       } else {
