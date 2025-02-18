@@ -490,6 +490,7 @@ export default function OuterLayoutRouter({
   notFound,
   forbidden,
   unauthorized,
+  metadataOutlet,
 }: {
   parallelRouterKey: string
   error: ErrorComponent | undefined
@@ -501,6 +502,7 @@ export default function OuterLayoutRouter({
   notFound: React.ReactNode | undefined
   forbidden: React.ReactNode | undefined
   unauthorized: React.ReactNode | undefined
+  metadataOutlet: React.ReactNode | undefined
 }) {
   const context = useContext(LayoutRouterContext)
   if (!context) {
@@ -604,6 +606,7 @@ export default function OuterLayoutRouter({
                 unauthorized={unauthorized}
               >
                 <RedirectBoundary>
+                  {metadataOutlet}
                   <InnerLayoutRouter
                     url={url}
                     tree={tree}

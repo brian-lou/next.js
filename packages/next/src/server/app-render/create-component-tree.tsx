@@ -548,6 +548,7 @@ async function createComponentTreeInternal({
             notFound={notFoundComponent}
             forbidden={forbiddenComponent}
             unauthorized={unauthorizedComponent}
+            metadataOutlet={metadataOutlet}
           />,
           childCacheNodeSeedData,
         ]
@@ -711,7 +712,6 @@ async function createComponentTreeInternal({
         <OutletBoundary>
           <MetadataOutlet ready={getViewportReady} />
           <MetadataOutlet ready={getMetadataReady} />
-          {metadataOutlet}
         </OutletBoundary>
       </React.Fragment>,
       parallelRouteCacheNodeSeedData,
@@ -855,6 +855,7 @@ async function createComponentTreeInternal({
           >
             {layerAssets}
             {serverSegment}
+            {metadataOutlet}
           </HTTPAccessFallbackBoundary>
         )
       } else {
