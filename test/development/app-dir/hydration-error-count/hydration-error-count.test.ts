@@ -58,7 +58,7 @@ describe('hydration-error-count', () => {
        "description": "In HTML, <p> cannot be a descendant of <p>.
      This will cause a hydration error.",
        "diff": "...
-         <OuterLayoutRouter parallelRouterKey="children" template={<RenderFromTemplateContext>}>
+         <OuterLayoutRouter parallelRouterKey="children" template={<RenderFromTemplateContext>} metadataOutlet={null}>
            <RenderFromTemplateContext>
              <ScrollAndFocusHandler segmentPath={[...]}>
                <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
@@ -94,7 +94,7 @@ describe('hydration-error-count', () => {
      {
        "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
        "diff": "...
-         <OuterLayoutRouter parallelRouterKey="children" template={<RenderFromTemplateContext>}>
+         <OuterLayoutRouter parallelRouterKey="children" template={<RenderFromTemplateContext>} metadataOutlet={null}>
            <RenderFromTemplateContext>
              <ScrollAndFocusHandler segmentPath={[...]}>
                <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
